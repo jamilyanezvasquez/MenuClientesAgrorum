@@ -1,4 +1,8 @@
-import time, utility
+import time
+from utility import agregar_cliente, eliminar_cliente, listar_clientes, buscar_cliente
+from paises import pais_id
+
+
 def display_menu():
     print("1. Agregar Cliente")
     print("2. Eliminar Cliente")
@@ -13,24 +17,22 @@ def main():
         display_menu()
         eleccion = input("Elija una opcion: ")
         if (eleccion == "1"):
-            pass
+            agregar_cliente()
         elif (eleccion == "2"):
-            pass
+            eliminar_cliente()
         elif (eleccion == "3"):
-            pass
+            listar_clientes()
         elif (eleccion == "4"):
-            pass
+            buscar_cliente()
         elif (eleccion == "5"):
-            pass
+            id = input("Ingrese su identificacion: ")
+            print("El cliente es de: " + pais_id(id) + "\n")
         elif (eleccion == "6"):
             print("Hasta la proxima!")
             break
         else:
             print("Valor invalido. Porfavor ingrese de nuevo\n")
             time.sleep(3)
-
-
-
 
 if __name__ == "__main__":
     main()
