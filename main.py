@@ -1,4 +1,4 @@
-import time
+import time, utility
 def display_menu():
     print("1. Agregar Cliente")
     print("2. Eliminar Cliente")
